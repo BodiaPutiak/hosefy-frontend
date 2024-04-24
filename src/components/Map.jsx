@@ -11,7 +11,14 @@ function Map() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(import.meta.env.VITE_DOMAIN).then(res => res.json()).then(data => setData(data));
+    fetch(import.meta.env.VITE_DOMAIN, {
+      headers: {
+        'Access-Control-Allow-Credentials' : true,
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Methods':'GET',
+        'Access-Control-Allow-Headers':'application/json',
+    },
+    }).then(res => res.json()).then(data => setData(data));
   }, []);
   
 	const toggleInfo = () => setOpenInfo(!openInfo);
