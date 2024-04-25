@@ -4,6 +4,7 @@ import {GoogleMap, useJsApiLoader, MarkerF, InfoWindowF} from '@react-google-map
 import { Container } from '@mui/material';
 import HouseInfo from './HouseInfo';
 import CreateRentApp from './CreateRentApp';
+import MarkerIcon from '../assets/vite.svg'
 
 function Map() {
   const [activeMarker, setActiveMarker] = useState(null);
@@ -63,7 +64,7 @@ function Map() {
             position={item.position}
             onClick={() => handleActiveMarker(item)}
             icon={{
-              url: '../assets/vite.svg'
+              url: MarkerIcon
             }}
           >
             {activeMarker === item.id ? 
