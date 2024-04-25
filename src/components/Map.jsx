@@ -63,7 +63,7 @@ function Map() {
             position={item.position}
             onClick={() => handleActiveMarker(item)}
             icon={{
-              url: '../../public/vite.svg'
+              url: '../assets/vite.svg'
             }}
           >
             {activeMarker === item.id ? 
