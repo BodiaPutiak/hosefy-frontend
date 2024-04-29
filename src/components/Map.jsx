@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import {GoogleMap, useJsApiLoader, MarkerF, InfoWindowF} from '@react-google-maps/api';
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import HouseInfo from './HouseInfo';
 import CreateRentApp from './CreateRentApp';
 import MarkerIcon from '../assets/vite.svg'
@@ -52,6 +52,7 @@ function Map() {
 
   return (
     <Container style={{width: '90vw', height: '65vh'}}>
+	<Typography variant='h6'>Wait a few seconds for markers to show up</Typography>
       <GoogleMap 
         center={center} 
         zoom={12} 
